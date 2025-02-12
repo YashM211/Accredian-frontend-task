@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import { purple } from '@mui/material/colors';
 import {Link} from 'react-router-dom';

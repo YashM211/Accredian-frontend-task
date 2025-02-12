@@ -1,5 +1,5 @@
 // src/components/Landing.js
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Button, Container, Typography, Box} from '@mui/material';
 import heroImage from '../assets/hero-image.jpg'; // Make sure to add an image in the specified path
 import ReferModal from '../components/ReferModal';

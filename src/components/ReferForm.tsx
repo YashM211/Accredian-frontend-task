@@ -25,7 +25,7 @@ const ReferForm: React.FC<ReferFormProps> = ({ onClose }) => {
     onSubmit: async (values) => {
       try {
         console.log('Submitting form', values); // Debugging statement
-        const response = await axios.post('http://localhost:3001/api/referrals', values);
+        const response = await axios.post('https://accredian-backend-task-8hcl.onrender.com/api/referrals', values);
         console.log('Response:', response.data); // Debugging statement
         onClose();
       } catch (error) {
