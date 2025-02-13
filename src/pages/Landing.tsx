@@ -11,6 +11,7 @@ const Landing = () => {
   const handleClose = () => setOpen(false);
 
   return (
+    
     <Box
       sx={{
         backgroundImage: `url(${heroImage})`,

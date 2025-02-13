@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { TextField, Button, Box } from '@mui/material';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 interface ReferFormProps {
   onClose: () => void;
@@ -26,6 +27,13 @@ const ReferForm: React.FC<ReferFormProps> = ({ onClose }) => {
       try {
         console.log('Submitting form', values); // Debugging statement
         const response = await axios.post('https://accredian-backend-task-8hcl.onrender.com/api/referrals', values);
+        if(response.data.success){
+          toast.success(response.data.message)
+        }
+        else{
+          toast.error(response.data.message)
+
+        }
         console.log('Response:', response.data); // Debugging statement
         onClose();
       } catch (error) {
